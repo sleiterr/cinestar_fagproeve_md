@@ -12,7 +12,7 @@ const heroText = [
     subjectClass:
       "font-semibold font-teko text-secondary text-2xl md:text-4xl uppercase mb-2 md:mb-4",
     titleClass:
-      "flex flex-col md:flex-row items-center font-bold font-cormorant text-secondary text-3xl md:text-6xl uppercase mb-4 md:mb-6",
+      "flex flex-col md:flex-row items-center font-bold font-cormorant text-secondary text-4xl md:text-7xl uppercase mb-4 md:mb-6",
     captionClass: "font-cormorant text-primary pl-4",
     descClass:
       "font-normal text-secondary text-sm md:text-xl text-center max-w-[270px] md:max-w-[420px]",
