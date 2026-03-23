@@ -32,9 +32,13 @@
   --color-btn-text: rgba(240, 114, 50, 1);
   --color-button-hover-bg: #E23E3C;
 
-  /* --color-price-badge-hot: rgba(255, 170, 0, 1); */
-  --gradient-price-badge: linear-gradient(180deg, #E23E3C 0%, #E8694B 100%);
 
+  /* hero gradient-fog */
+  --gradient-hero-fog: linear-gradient(to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.9) 15%,
+      rgba(0, 0, 0, 0.2) 46%,
+      rgba(0, 0, 0, 0) 100%);
   /* footer-color */
   --color-primary-footer: #fff;
   --color-secondary-footer: #F07232;
@@ -59,4 +63,16 @@ body {
   color: var(--color-secondary);
   list-style: none;
   overflow-x: hidden;
+}
+
+.hero-fog {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 520px;
+  /* або h-20 */
+  pointer-events: none;
+  background: var(--gradient-hero-fog);
+  z-index: 2;
 }
