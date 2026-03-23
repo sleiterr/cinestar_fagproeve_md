@@ -35,6 +35,7 @@ const Hero = () => {
           <HeroItem />
         </div>
       </div>
+      <div className="hero-fog"></div>
     </section>
   );
 };
