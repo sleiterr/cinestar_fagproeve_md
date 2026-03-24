@@ -5,6 +5,7 @@ import CinestarIntroSection from "../../components/CinestarIntro/CinestarIntroSe
 import CineStatsSection from "../../components/CineStatsSection/CineStatsSection";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Service from "../../components/Service/Service";
+import AboutSection from "../../components/AboutSection/AboutSection";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <CineStatsSection />
       <Portfolio />
       <Service />
+      <AboutSection />
     </>
   );
 };
