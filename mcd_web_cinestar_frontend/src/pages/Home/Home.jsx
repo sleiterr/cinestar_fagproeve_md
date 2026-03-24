@@ -4,6 +4,7 @@ import Awards from "../../components/Awards/Awards";
 import CinestarIntroSection from "../../components/CinestarIntro/CinestarIntroSection";
 import CineStatsSection from "../../components/CineStatsSection/CineStatsSection";
 import Portfolio from "../../components/Portfolio/Portfolio";
+import Service from "../../components/Service/Service";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <CinestarIntroSection />
       <CineStatsSection />
       <Portfolio />
+      <Service />
     </>
   );
 };

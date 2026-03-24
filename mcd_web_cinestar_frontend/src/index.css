@@ -6,6 +6,7 @@
 @theme {
   --color-body: rgba(0, 0, 0, 1);
   --color-portfolio: #212121;
+  --color-service: rgba(0, 0, 0, 0.90);
   --color-footer: #000;
 
   --color-menu-bg: #000000;
