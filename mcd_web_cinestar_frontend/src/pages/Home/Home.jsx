@@ -3,6 +3,7 @@ import Hero from "../../components/Hero/Hero";
 import Awards from "../../components/Awards/Awards";
 import CinestarIntroSection from "../../components/CinestarIntro/CinestarIntroSection";
 import CineStatsSection from "../../components/CineStatsSection/CineStatsSection";
+import Portfolio from "../../components/Portfolio/Portfolio";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Awards />
       <CinestarIntroSection />
       <CineStatsSection />
+      <Portfolio />
     </>
   );
 };

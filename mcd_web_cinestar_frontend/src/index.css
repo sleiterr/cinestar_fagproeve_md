@@ -18,6 +18,10 @@
   --color-accordion-secondary: #000000;
 
   --color-link: #F07232;
+  --color-arrow-slider: rgba(242, 157, 56, 1);
+  --color-arrow-dot: rgba(153, 153, 153, 0.37);
+  --color-arrow-active: rgba(242, 157, 56, 1);
+  --color-arrow-bg: rgba(28, 28, 28, 0.3);
 
   /*form colors*/
   --color-dark-slider: #777;

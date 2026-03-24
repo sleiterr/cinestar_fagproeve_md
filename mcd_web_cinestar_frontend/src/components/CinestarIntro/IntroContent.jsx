@@ -7,12 +7,12 @@ const introText = [
     title: "Har du en idé til dit næste projekt ?",
     desc: "Lad os omsætte dine visioner til levende billeder, der fænger dit publikum. Hos os får du en professionel, kreativ proces fra idéudvikling til færdig produktion.",
     subjectClass:
-      "font-semibold font-teko text-primary text-xl md:text-2xl uppercase mb-2 md:mb-4",
+      "font-bold font-teko text-primary text-xl md:text-2xl uppercase mb-2 md:mb-4",
     titleClass:
       "flex flex-col md:flex-row items-center font-bold font-cormorant text-secondary text-3xl md:text-4xl uppercase mb-4 md:mb-6",
 
     descClass:
-      "font-normal text-secondary text-xl text-start max-w-[320px] md:max-w-[420px]",
+      "font-medium text-secondary text-xl text-start max-w-[320px] md:max-w-[420px]",
   },
 ];
 

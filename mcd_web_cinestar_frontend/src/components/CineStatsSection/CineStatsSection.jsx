@@ -11,7 +11,7 @@ const statsText = [
       "flex flex-col md:flex-row items-center font-bold font-cormorant text-secondary text-3xl md:text-4xl uppercase mb-4 md:mb-6 md:max-w-[520px]",
 
     descClass:
-      "font-normal text-secondary text-xl text-start max-w-[320px] md:max-w-[420px]",
+      "font-medium text-secondary text-xl text-start max-w-[320px] md:max-w-[460px]",
   },
 ];
 
