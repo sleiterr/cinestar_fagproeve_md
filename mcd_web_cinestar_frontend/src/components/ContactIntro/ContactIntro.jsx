@@ -17,9 +17,9 @@ const introText = [
   },
 ];
 
-const ContactIntroSection = () => {
+const ContactIntro = () => {
   return (
-    <Section className="px-4">
+    <Section className="px-4 py-16! md:py-20!">
       <IntroItem />
     </Section>
   );
@@ -43,4 +43,4 @@ const IntroItem = () => {
   );
 };
 
-export default ContactIntroSection;
+export default ContactIntro;

@@ -15,3 +15,12 @@ const fetchData = async (endpoint) => {
 export const fetchReviews = () => fetchData("reviews");
 
 export default fetchData;
+
+export const createBlog = async (blogData) => {
+  const response = await fetch(`${API_URL}/message`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(blogData),
+  });
+  return await response.json();
+};
