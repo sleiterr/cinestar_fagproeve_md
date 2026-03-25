@@ -7,42 +7,39 @@ const contactData = [
     id: 1,
     href: "mailto: cinestar@production.dk",
     text: " cinestar@production.dk",
-    clasName: "footer-link font-light text-lg tracking-wide text-content",
-    icon: <MdEmail className="text-white w-6 h-6" />,
+    clasText: "font-meium text-xl text-content",
+    icon: <MdEmail className="text-form-icon w-10 h-10" />,
     className: "footer-item flex items-center gap-2",
   },
   {
     id: 2,
     href: "tel:+45 12 34 56 78",
     text: "+45 12 34 56 78",
-    clasName: "footer-link font-light text-lg tracking-wide text-content",
-    icon: <FaPhoneAlt className="text-white w-6 h-6" />,
+    clasText: "font-meium text-xl text-content",
+    icon: <FaPhoneAlt className="text-form-icon w-10 h-10" />,
     className: "footer-item flex items-center justify-center gap-2",
   },
   {
     id: 3,
     text: "Fotovej 66, 8456 Cineby",
-    clasName: "footer-link font-light text-lg tracking-wide text-content",
-    icon: <MdPlace className="text-white w-6 h-6" />,
+    clasText: "font-meium text-xl text-content",
+    icon: <MdPlace className="text-form-icon w-10 h-10" />,
     className: "footer-item flex items-center justify-center gap-2",
   },
 ];
 
 const Contact = () => {
   return (
-    <ul className="flex flex-col items-start md:flex-row md:items-center justify-center gap-4 lg:gap-6">
+    <ul className="flex flex-col items-start justify-center gap-4 lg:gap-8">
       {contactData.map((item) => (
         <li key={item.id} className={item.className}>
           {item.icon}
           {item.href ? (
-            <a
-              href={item.href}
-              className="footer-link font-light text-lg tracking-wide text-content"
-            >
+            <a href={item.href} className={item.clasText}>
               {item.text}
             </a>
           ) : (
-            <p className={item.className}>{item.text}</p>
+            <p className={item.clasText}>{item.text}</p>
           )}
         </li>
       ))}

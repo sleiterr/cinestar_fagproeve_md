@@ -8,6 +8,7 @@
   --color-portfolio: #212121;
   --color-service: rgba(0, 0, 0, 0.90);
   --color-contact: rgba(0, 0, 0, 0.80);
+  --color-confirmation: rgba(0, 0, 0, 0.80);
   --color-footer: #000;
 
   --color-menu-bg: #000000;
@@ -34,6 +35,7 @@
   --color-form-btn: rgba(119, 119, 119, 0.95);
   --color-focus-border: #E54E41;
   --color-form-bg: #E54E41;
+  --color-form-icon: rgba(240, 114, 50, 1);
   --color-input-custom: #777;
 
   /* btn custom */
