@@ -6,6 +6,7 @@ import CineStatsSection from "../../components/CineStatsSection/CineStatsSection
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Service from "../../components/Service/Service";
 import AboutSection from "../../components/AboutSection/AboutSection";
+import ReviewsSection from "../../components/Reviews/ReviewsSection";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Portfolio />
       <Service />
       <AboutSection />
+      <ReviewsSection />
     </>
   );
 };

@@ -24,6 +24,9 @@
   --color-arrow-active: rgba(242, 157, 56, 1);
   --color-arrow-bg: rgba(28, 28, 28, 0.3);
 
+  --color-card-bg: rgba(153, 153, 153, 0.2);
+  --color-quote-bg: #999;
+
   /*form colors*/
   --color-dark-slider: #777;
   --color-form-border: rgba(119, 119, 119, 0.95);
