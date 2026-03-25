@@ -7,6 +7,8 @@ import Portfolio from "../../components/Portfolio/Portfolio";
 import Service from "../../components/Service/Service";
 import AboutSection from "../../components/AboutSection/AboutSection";
 import ReviewsSection from "../../components/Reviews/ReviewsSection";
+import ContactIntroSection from "../../components/ContactIntro/ContactIntroSection";
+import СontactForm from "../../components/Сontact/СontactForm";
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
       <Service />
       <AboutSection />
       <ReviewsSection />
+      <ContactIntroSection />
+      <СontactForm />
     </>
   );
 };
