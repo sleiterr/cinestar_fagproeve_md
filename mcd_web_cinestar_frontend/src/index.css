@@ -11,9 +11,11 @@
   --color-contact: rgba(0, 0, 0, 0.80);
   --color-confirmation: rgba(0, 0, 0, 0.80);
   --color-footer: #000;
-
+  
   --color-menu-bg: #000000;
+  
   --color-hero-overlay: rgba(0, 0, 0, 0.30);
+  --color-footer-overlay: rgba(0, 0, 0, 0.80);
 
   --color-primary: #F07232;
   --color-secondary: #fff;
