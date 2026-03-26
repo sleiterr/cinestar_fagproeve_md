@@ -31,12 +31,12 @@
 
   /*form colors*/
   --color-dark-slider: #777;
-  --color-form-border: rgba(119, 119, 119, 0.95);
+  --color-form-border: rgba(255, 255, 255, 0.8);
   --color-form-btn: rgba(119, 119, 119, 0.95);
   --color-focus-border: #E54E41;
   --color-form-bg: #E54E41;
   --color-form-icon: rgba(240, 114, 50, 1);
-  --color-input-custom: #777;
+  --color-input-custom: rgba(153, 153, 153, 1);
 
   /* btn custom */
   --color-btn-border: rgba(240, 114, 50, 1);

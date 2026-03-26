@@ -32,7 +32,7 @@ const ContactForm = () => {
         subject: values.subject,
         description: values.message,
       };
-      
+
       const res = await fetch(`${API_URL}/message`, {
         method: "POST",
         headers: {
@@ -101,10 +101,9 @@ const SendButton = ({ children, className, ...rest }) => {
         type="submit"
         {...rest}
         className={clsx(
-          "flex items-center justify-center gap-6 md:gap-8 mx-auto mt-8 w-full",
-          "border-2 border-btn-border bg-transparent py-4 md:py-2 px-14 md:px-12 rounded text-center cursor-pointer",
+          "flex items-start md:items-center justify-center gap-6 md:gap-8 md:mx-auto mt-8 md:w-full",
+          "border-2 border-btn-border bg-transparent py-4 md:py-4 px-14 md:px-12 text-center cursor-pointer",
           "font-medium text-secondary text-xl md:text-2xl",
-          "rounded-[6.25rem]",
           "transition duration-300 ease-in-out",
           "hover:bg-white/20 hover:backdrop-blur-md hover:border-white/50",
           className,

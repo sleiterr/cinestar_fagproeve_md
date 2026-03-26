@@ -11,7 +11,7 @@ const Input = ({ label, name, ...rest }) => {
         {...rest}
         className={clsx(
           "font-normal text-base text-input-custom px-3 h-12 md:px-4 md:h-12",
-          "bg-white rounded-3xl border border-white",
+          "bg-transparent border-l border-b border-form-border",
           "shadow focus:outline-none transition-shadow duration-300 focus:ring-2 focus:ring-focus-border resize-none",
         )}
       />
