@@ -18,17 +18,15 @@ const BlogFormUpdate = ({ blog, onClose }) => {
   // values for the form fields, using the existing blog data to pre-populate the form when editing an existing blog post.
   const initialValues = {
     title: blog.title || "",
-    author: blog.author || "",
     teaser: blog.teaser || "",
-    content: blog.content || "",
+    description: blog.description || "",
     image: null,
   };
 
   const validationSchema = Yup.object({
     title: Yup.string().required("Title is required"),
-    author: Yup.string().required("Author is required"),
     teaser: Yup.string().required("Teaser is required"),
-    content: Yup.string().required("Content is required"),
+    description: Yup.string().required("Content is required"),
     // image: Yup.mixed(), // optional
   });
 
@@ -38,9 +36,8 @@ const BlogFormUpdate = ({ blog, onClose }) => {
       const formData = new FormData();
       formData.append("id", blog._id);
       formData.append("title", values.title);
-      formData.append("author", values.author);
       formData.append("teaser", values.teaser);
-      formData.append("content", values.content);
+      formData.append("description", values.description);
       if (values.image) formData.append("image", values.image);
 
       const res = await fetch(`${API_URL}/blog`, {
@@ -64,9 +61,8 @@ const BlogFormUpdate = ({ blog, onClose }) => {
       resetForm({
         values: {
           title: "",
-          author: "",
           teaser: "",
-          content: "",
+          description: "",
           image: null,
         },
       });
@@ -92,10 +88,7 @@ const BlogFormUpdate = ({ blog, onClose }) => {
               key={
                 values.image
                   ? values.image.name
-                  : values.title +
-                    values.author +
-                    values.teaser +
-                    values.content
+                  : values.title + values.teaser + values.description
               }
               id="edit-image"
               src={
@@ -113,12 +106,6 @@ const BlogFormUpdate = ({ blog, onClose }) => {
               onChange={(e) => setFieldValue("title", e.target.value)}
               placeholder="Enter Title"
             />
-            <InputField
-              name="author"
-              value={values.author}
-              onChange={(e) => setFieldValue("author", e.target.value)}
-              placeholder="Enter Author"
-            />
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
             <TextareaField
@@ -129,9 +116,9 @@ const BlogFormUpdate = ({ blog, onClose }) => {
               rows={6}
             />
             <TextareaField
-              name="content"
-              value={values.content}
-              onChange={(e) => setFieldValue("content", e.target.value)}
+              name="description"
+              value={values.description}
+              onChange={(e) => setFieldValue("description", e.target.value)}
               placeholder="Enter Content"
               rows={6}
             />
