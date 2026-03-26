@@ -11,9 +11,9 @@
   --color-contact: rgba(0, 0, 0, 0.80);
   --color-confirmation: rgba(0, 0, 0, 0.80);
   --color-footer: #000;
-  
+
   --color-menu-bg: #000000;
-  
+
   --color-hero-overlay: rgba(0, 0, 0, 0.30);
   --color-footer-overlay: rgba(0, 0, 0, 0.80);
 
@@ -58,6 +58,11 @@
   /* footer-color */
   --color-primary-footer: #fff;
   --color-secondary-footer: #F07232;
+
+  /* LoginNav */
+  --color-icon-overlay: rgba(255, 255, 255, 0.18);
+  --color-hover-icon: rgba(255, 255, 255, 0.3);
+
 
   /* fonts */
   --font-cormorant: "Cormorant", serif;
