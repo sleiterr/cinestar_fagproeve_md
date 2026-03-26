@@ -3,7 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 
-const NavMenu = ({ handleLinkClick, isLoggedIn, token }) => {
+const NavMenu = ({ handleLinkClick, isLoggedIn, onLogout, token }) => {
   const role = token ? jwtDecode(token).role : null;
 
   return (
@@ -94,32 +94,10 @@ const NavMenu = ({ handleLinkClick, isLoggedIn, token }) => {
             </li>
           </>
         )}
-        {isLoggedIn && role === "member" && (
-          <>
-            <li>
-              <Link
-                to="/my-page"
-                smooth={true.toString()}
-                duration={800}
-                offset={-100}
-                className={clsx(
-                  "relative cursor-pointer ",
-                  "font-bold text-secondary text-2xl md:text-4xl tracking-wide",
-                  "hover:font-light transition-all duration-300",
-                )}
-                onClick={() => {
-                  handleLinkClick();
-                }}
-              >
-                My Page
-              </Link>
-            </li>
-          </>
-        )}
         {!isLoggedIn && (
           <li>
             <Link
-              to="#"
+              to="/login"
               smooth={true.toString()}
               duration={800}
               offset={-100}
@@ -138,7 +116,7 @@ const NavMenu = ({ handleLinkClick, isLoggedIn, token }) => {
         {isLoggedIn && (
           <li>
             <Link
-              to="/auth-landing"
+              to="/login"
               smooth={true.toString()}
               duration={800}
               offset={-100}
@@ -147,9 +125,9 @@ const NavMenu = ({ handleLinkClick, isLoggedIn, token }) => {
                 "font-bold text-secondary text-2xl md:text-4xl tracking-wide",
                 "hover:font-light transition-all duration-300",
               )}
-              onClick={handleLinkClick}
+              onClick={onLogout}
             >
-              Log out
+              Logout
             </Link>
           </li>
         )}
