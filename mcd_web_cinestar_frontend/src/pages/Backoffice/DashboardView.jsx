@@ -58,7 +58,8 @@ const DashboardView = ({ setEditBlog }) => {
           <>
             <SummaryTableHeader>Image</SummaryTableHeader>
             <SummaryTableHeader align="center">Title</SummaryTableHeader>
-            <SummaryTableHeader align="center">Author</SummaryTableHeader>
+            <SummaryTableHeader align="center">Teaser</SummaryTableHeader>
+            <SummaryTableHeader align="center">Details</SummaryTableHeader>
             <SummaryTableHeader align="center">Actions</SummaryTableHeader>
           </>
         }
@@ -66,11 +67,18 @@ const DashboardView = ({ setEditBlog }) => {
         {localBlogs.map((item) => (
           <tr key={item._id}>
             <SummaryTableCell>
-              <img src={item.image} alt={item.title} />
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-[320px] h-auto object-cover rounded"
+              />
             </SummaryTableCell>
             <SummaryTableCell align="center">{item.title}</SummaryTableCell>
             <SummaryTableCell align="center">
               {truncateWords(item.teaser, 18)}
+            </SummaryTableCell>
+            <SummaryTableCell align="center">
+              {truncateWords(item.description, 16)}
             </SummaryTableCell>
             <SummaryTableCell align="center">
               <div className="flex flex-col items-start justify-center gap-2">

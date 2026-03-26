@@ -15,9 +15,8 @@ const BlogFormEditor = () => {
   // current form values and a key to force re-mounting the form for resetting after submission
   const initialValues = {
     title: "",
-    author: "",
     teaser: "",
-    content: "",
+    description: "",
     image: null,
   };
   // State to force re-mounting the form to reset file input after submission
@@ -26,9 +25,8 @@ const BlogFormEditor = () => {
   // Validation schema for the form fields
   const validationSchema = Yup.object({
     title: Yup.string().required("Title is required"),
-    author: Yup.string().required("Author is required"),
     teaser: Yup.string().required("Teaser is required"),
-    content: Yup.string().required("Content is required"),
+    description: Yup.string().required("Description is required"),
     // image: Yup.mixed(), // optional
   });
 
@@ -39,9 +37,8 @@ const BlogFormEditor = () => {
       // new FormData object to hold the form data, append each field to the FormData object, including the image file if it exists, using the append method which takes the field name and value as arguments
       const formData = new FormData();
       formData.append("title", values.title);
-      formData.append("author", values.author);
       formData.append("teaser", values.teaser);
-      formData.append("content", values.content);
+      formData.append("description", values.description);
       // if an image file is selected, append it to the FormData object with the key "image"
       if (values.image) formData.append("image", values.image);
       // Send POST request to API to create a new blog post with the form data, await the response and parse it as JSON
@@ -91,12 +88,6 @@ const BlogFormEditor = () => {
               onChange={(e) => setFieldValue("title", e.target.value)}
               placeholder="Enter Title"
             />
-            <InputField
-              name="author"
-              value={values.author}
-              onChange={(e) => setFieldValue("author", e.target.value)}
-              placeholder="Enter Author"
-            />
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
             <TextareaField
@@ -107,9 +98,9 @@ const BlogFormEditor = () => {
               rows={6}
             />
             <TextareaField
-              name="content"
-              value={values.content}
-              onChange={(e) => setFieldValue("content", e.target.value)}
+              name="description"
+              value={values.description}
+              onChange={(e) => setFieldValue("description", e.target.value)}
               placeholder="Enter Content"
               rows={6}
             />
