@@ -10,8 +10,8 @@ const TextareaField = ({ label, name, ...rest }) => (
       {...rest}
       className={clsx(
         "font-normal text-base text-input-custom p-3 h-51.75",
-        "bg-white rounded-3xl border border-white",
-        "shadow focus:outline-none transition-shadow duration-300 focus:ring-2 focus:ring-form-border resize-none",
+        "bg-transparent border-l border-b border-form-border",
+        "shadow focus:outline-none transition-shadow duration-300 focus:ring-2 focus:ring-focus-border resize-none",
       )}
     />
     <div className="mt-2">
