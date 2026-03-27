@@ -7,6 +7,7 @@ import CardBlog from "./CardBlog";
 const Blog = () => {
   return (
     <Section
+      id="blog"
       style={{ background: "var(--color-blog)" }}
       className={clsx(
         "grid grid-cols-1 md:grid-cols-2 gap-8 px-4!",

@@ -7,7 +7,7 @@ import ContactForm from "../ContactIntro/ContactForm";
 
 const ContactIntroSection = () => {
   return (
-    <SectionWrapper bgSrc={studie}>
+    <SectionWrapper bgSrc={studie} id="contact">
       <div className="absolute inset-0 bg-contact z-0"></div>
       <div
         className={clsx(

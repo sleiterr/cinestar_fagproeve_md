@@ -115,3 +115,5 @@ Kun til undervisningsbrug.
 Projekt repository: [GitHub](https://github.com/sleiterr/cinestar_fagproeve_md)
 
 Se udvidet dokumentation i [dokumentation.md](./dokumentation.md)
+
+Projektets rapport findes i mappen `../Project_Reports` (Project Report is located in the `../Project_Reports` folder).
