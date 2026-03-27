@@ -5,7 +5,7 @@ import Reviews from "./Reviews";
 
 const ReviewsSection = () => {
   return (
-    <Section className="px-4">
+    <Section className="px-4" id="reviews">
       <ReviewsContent />
       <Reviews />
     </Section>

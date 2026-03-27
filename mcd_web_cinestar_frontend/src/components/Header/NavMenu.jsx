@@ -11,7 +11,7 @@ const NavMenu = ({ handleLinkClick, isLoggedIn, onLogout, token }) => {
       <ul className="flex flex-col items-start gap-6 w-30">
         <li>
           <a
-            href="#"
+            href="#home"
             smooth={true.toString()}
             duration={800}
             className={clsx(
@@ -26,7 +26,7 @@ const NavMenu = ({ handleLinkClick, isLoggedIn, onLogout, token }) => {
         </li>
         <li>
           <a
-            href="#"
+            href="#blog"
             smooth={true.toString()}
             duration={800}
             offset={-100}
@@ -42,7 +42,7 @@ const NavMenu = ({ handleLinkClick, isLoggedIn, onLogout, token }) => {
         </li>
         <li className="hidden md:block">
           <a
-            href="#price"
+            href="#reviews"
             smooth={true.toString()}
             duration={800}
             offset={-100}
@@ -53,12 +53,12 @@ const NavMenu = ({ handleLinkClick, isLoggedIn, onLogout, token }) => {
             )}
             onClick={handleLinkClick}
           >
-            Faq
+            Anmeldelser
           </a>
         </li>
         <li>
           <a
-            href="#"
+            href="#contact"
             smooth={true.toString()}
             duration={800}
             offset={-100}

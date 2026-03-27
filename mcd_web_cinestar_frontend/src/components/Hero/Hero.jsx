@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section
       className="relative w-full min-w-[320px] h-screen lg:h-auto bg-cover bg-no-repeat bg-center md:aspect-8/5"
-      id="#"
+      id="home"
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundPosition: "center center",
