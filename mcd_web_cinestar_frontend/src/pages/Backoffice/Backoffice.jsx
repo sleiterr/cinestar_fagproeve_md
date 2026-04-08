@@ -21,8 +21,12 @@ const Backoffice = ({ token, onLogout }) => {
         <div className="grid grid-rows-1 gap-8">
           <DashboardView setEditBlog={setEditBlog} />
           <div className="grid grid-cols-2 gap-8">
-            <BlogFormEditor />
-            <BlogFormUpdate blog={editBlog} onClose={handleCloseEdit} />
+            <BlogFormEditor token={token} />
+            <BlogFormUpdate
+              blog={editBlog}
+              onClose={handleCloseEdit}
+              token={token}
+            />
           </div>
         </div>
       </div>

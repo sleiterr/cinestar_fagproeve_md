@@ -11,7 +11,7 @@ import ImgEdit from "./ImgEdit";
 const API_URL = import.meta.env.VITE_API_BASE_URL;
 
 // Component for creating a new blog post
-const BlogFormEditor = () => {
+const BlogFormEditor = ({ token }) => {
   // current form values and a key to force re-mounting the form for resetting after submission
   const initialValues = {
     title: "",
@@ -20,7 +20,7 @@ const BlogFormEditor = () => {
     image: null,
   };
   // State to force re-mounting the form to reset file input after submission
-  const [formKey, setFormKey] = React.useState(0);
+  const [formKey, setFormKey] = useState(0);
 
   // Validation schema for the form fields
   const validationSchema = Yup.object({
@@ -40,21 +40,29 @@ const BlogFormEditor = () => {
       formData.append("teaser", values.teaser);
       formData.append("description", values.description);
       // if an image file is selected, append it to the FormData object with the key "image"
-      if (values.image) formData.append("image", values.image);
+      if (values.image) formData.append("file", values.image);
       // Send POST request to API to create a new blog post with the form data, await the response and parse it as JSON
       const res = await fetch(`${API_URL}/blog`, {
         method: "POST",
+        headers: token
+          ? {
+              Authorization: `Bearer ${token}`,
+            }
+          : undefined,
         body: formData,
       });
       // response data from the API after attempting to create a new blog post.
-      const data = await res.json();
+      const contentType = res.headers.get("content-type") || "";
+      const data = contentType.includes("application/json")
+        ? await res.json()
+        : null;
 
       if (res.ok) {
         toast.success("Blog created successfully!");
         resetForm();
         setFormKey((k) => k + 1); // Force re-mount to reset file input
       } else {
-        toast.error(data.message || "Failed to create blog");
+        toast.error(data?.message || "Failed to create blog");
       }
     } catch (err) {
       console.error(err);
