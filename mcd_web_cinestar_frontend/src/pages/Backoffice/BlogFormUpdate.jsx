@@ -9,7 +9,7 @@ import ImgUploader from "./ImgUploader";
 
 const API_URL = import.meta.env.VITE_API_BASE_URL;
 
-const BlogFormUpdate = ({ blog, onClose }) => {
+const BlogFormUpdate = ({ blog, onClose, token }) => {
   if (!blog)
     return (
       <p className="font-medium text-xl text-white">Select a blog to edit</p>
@@ -38,20 +38,28 @@ const BlogFormUpdate = ({ blog, onClose }) => {
       formData.append("title", values.title);
       formData.append("teaser", values.teaser);
       formData.append("description", values.description);
-      if (values.image) formData.append("image", values.image);
+      if (values.image) formData.append("file", values.image);
 
       const res = await fetch(`${API_URL}/blog`, {
         method: "PUT",
+        headers: token
+          ? {
+              Authorization: `Bearer ${token}`,
+            }
+          : undefined,
         body: formData,
       });
 
-      const data = await res.json();
+      const contentType = res.headers.get("content-type") || "";
+      const data = contentType.includes("application/json")
+        ? await res.json()
+        : null;
 
       if (res.ok) {
         toast.success("Blog updated successfully!");
         updateSuccess = true;
       } else {
-        toast.error(data.message || "Failed to update blog");
+        toast.error(data?.message || "Failed to update blog");
       }
     } catch (err) {
       console.error(err);

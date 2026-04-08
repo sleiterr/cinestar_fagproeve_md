@@ -1,0 +1,34 @@
+.react-poster-basic {
+    position: relative;
+}
+
+.react-poster-basic video {
+    width: 100%;
+}
+
+.react-poster-basic__poster {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    pointer-events: none;
+    transition: opacity 0.25s;
+}
+
+.react-poster-basic__poster:not([data-visible]) {
+    opacity: 0;
+}
+
+.react-poster-basic__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    /* padding: 8px; */
+    /* backdrop-filter: blur(10px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.25); */
+    /* border-radius: 50%; */
+    /* padding-inline: 16px; */
+}
